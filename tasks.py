@@ -13,4 +13,9 @@ def build_sales_database(n):
             database[name_user] = {}
         database[name_user][item] = database[name_user].get(item,0) + count
     return database
+def print_sorted_sales(database):
+    for name_user in sorted(database.keys()):
+        print(name_user + ":")
+        for item in sorted(database[name_user].keys()):
+            print(item,database[name_user][item])
 
