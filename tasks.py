@@ -5,7 +5,7 @@ def build_sales_database(n):
     database = {}
     for i in range(n):
         print("введите имя покупателя, наименование товара, количество: ")
-        parts = input().split()
+        parts = input().replace(",", " ").split()
         name_user = parts[0]
         item = parts[1]
         count = int(parts[2])
@@ -22,5 +22,7 @@ def main_database():
     lines = lines_count()
     sales_data = build_sales_database(lines)
     print_sorted_sales(sales_data)
+
+main_database()
 
 
