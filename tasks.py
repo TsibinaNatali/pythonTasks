@@ -22,6 +22,7 @@ def main_database():
     lines = lines_count()
     sales_data = build_sales_database(lines)
     print_sorted_sales(sales_data)
+
 main_database()
 
 
