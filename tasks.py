@@ -18,4 +18,9 @@ def print_sorted_sales(database):
         print(name_user + ":")
         for item in sorted(database[name_user].keys()):
             print(item,database[name_user][item])
+def main_database():
+    lines = lines_count()
+    sales_data = build_sales_database(lines)
+    print_sorted_sales(sales_data)
+
 
